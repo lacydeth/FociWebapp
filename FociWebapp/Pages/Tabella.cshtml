@@ -1,0 +1,30 @@
+﻿@page
+@model FociWebapp.Pages.Tabella
+
+<h1>Match Results</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Draws</th>
+            <th>Goals</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model.TeamResults)
+        {
+            <tr>
+                <td>@result.Name</td>
+                <td>@result.Wins</td>
+                <td>@result.Losses</td>
+                <td>@result.Draws</td>
+                <td>@result.Goals</td>
+                <td>@result.Points</td>
+            </tr>
+        }
+    </tbody>
+</table>
